@@ -1,8 +1,10 @@
 Pendency System
+
 Pendency is a system that is able to track counts of in-flight/in-progress entities.
 The system is told when to start tracking a particular entity, and when to stop. And at any point the system can be asked how many entities are in-progress (or in-flight). The system is expected to give this count, as fast as possible
 
 Problem Statement
+
 You need to design a system that is able to track pending entities.
 An entity is identified using a unique ID and a list of hierarchical tags.
 There are 3 parts to this problem statement. startTracking, endTracking and getCounts.
@@ -64,6 +66,7 @@ getCounts(["UPI", "Karnataka", "Bangalore"])
 Output: 0
 
 Requirements P0
+  
 Implement the above with appropriate assumptions for the example shown above.
 Optimize your solution for time/space complexity taking reasonable tradeoffs.
 You can limit your implementation, specifically for transactions (as shown in the example: startTracking(transactionID, [instrument, state, city]);
@@ -71,10 +74,13 @@ You can choose to assume that the hierarchical tags are of fixed size of 3 and a
 You can simulate the operations of tracking and getting counts as shown in the sample, using a main function or test cases
 You should have a working code that demonstrates the same.
 Handle error scenarios appropriately
+  
 Requirements P1
+  
 Make your library/interfaces generic enough to be used for tracking any entities with any number of hierarchical tags. Not just transactions with 3 tags.
 Eg: Track pending restaurant orders, and fetch counts of pending orders per location, or counts of pending orders per location and specific restaurant and specific cuisine
 startTracking(orderId, [location, restaurant, cuisine, title]) 
+
 Things to keep in mind
 You are only allowed to use in-memory data structures
 You are NOT allowed to use any databases
@@ -86,6 +92,8 @@ Should you have any doubts, you are allowed to make appropriate assumptions, as 
 You are allowed to code on your favourite IDEs as long as you paste the code back into the tool within the allotted time frame
 How you will be evaluated
 You are expected to write production quality code while implementing the requirements.
+
+ 
 We look for the following:
 
 Separation of concerns
